@@ -1,1 +1,1 @@
-print("Adding bug to file")
+print("Adding bug to the script")
