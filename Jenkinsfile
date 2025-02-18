@@ -15,7 +15,7 @@ pipeline {
                         branches: [[name: "*/${BRANCH_NAME}"]],  // Checkout the specific branch
                         doGenerateSubmoduleConfigurations: false,
                         extensions: [],
-                        userRemoteConfigs: [credentialsId: 'Githubid', [url: "${GIT_REPO_URL}"]]  // GitHub repository URL
+                        userRemoteConfigs: [credentialsId: 'Githubid', url: "${GIT_REPO_URL}"]  // GitHub repository URL
                     ])
                 }
             }
