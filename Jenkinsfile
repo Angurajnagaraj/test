@@ -11,11 +11,7 @@ pipeline {
             steps {
                 script {
                     // Checkout the code from GitHub
-                    checkout([
-                        branches: [[name: "*/${BRANCH_NAME}"]],  // Checkout the specific branch
-                        extensions: [],
-                        userRemoteConfigs: [credentialsId: 'Githubid', url: "${GIT_REPO_URL}"]  // GitHub repository URL
-                    ])
+                    git url: "${GIT_REPO_URL}", branch: "${BRANCH_NAME}"
                 }
             }
         }
