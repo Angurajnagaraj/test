@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        GIT_REPO_URL = 'https://github.com/Angurajnagaraj/Jenkins-Zero-To-Hero'  // Your GitHub repository URL
+        GIT_REPO_URL = 'https://github.com/Angurajnagaraj/test'  // Your GitHub repository URL
         BRANCH_NAME = 'main'  // Branch you want to checkout, change as needed
     }
 
