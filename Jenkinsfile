@@ -19,7 +19,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'cat hello.py'
+                sh '''pwd
+                    cat hello.py'''
                 // Add build steps here (e.g., Maven, Gradle, etc.)
             }
         }
