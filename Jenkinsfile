@@ -7,7 +7,7 @@ pipeline {
         DOCKER_CREDENTIALS = credentials('Dockerid')
     }
 
-		stages {
+      stages {
         stage('Login to Docker Hub') {
             steps {
                 script {
@@ -15,4 +15,5 @@ pipeline {
                 }
             }
         }
+	}
 }
