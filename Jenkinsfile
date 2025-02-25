@@ -14,7 +14,7 @@ pipeline {
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-          sh 'curl ${SONAR_URL}'
+          sh 'curl -I ${SONAR_URL}'
         }
       }
     }
