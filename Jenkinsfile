@@ -8,12 +8,15 @@ pipeline {
     }
 
       stages {
-        stage('Login to Docker Hub') {
-            steps {
-                script {
-                    sh "echo \$DOCKER_CREDENTIALS_PSW | docker login -u \$DOCKER_CREDENTIALS_USR --password-stdin"
-                }
-            }
+       stage('Static Code Analysis') {
+      environment {
+        SONAR_URL = "http://localhost:9000"
+      }
+      steps {
+        withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
+          sh 'curl ${SONAR_URL}'
         }
+      }
+    }
 	}
 }
